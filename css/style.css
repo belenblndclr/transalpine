@@ -1,0 +1,29 @@
+
+
+/**************DROP JQUERY*/
+
+.draggable { width: 600px; float: left;  border-right: 1em solid pink; background-color: white;}
+#containment-wrapper { 	position: absolute; left: -500px; width: 1200px; }
+	
+/**********************HEADER */
+
+header {margin-left: 20px;width: auto;}
+header nav {width: 121px; height: auto;}
+header nav ul {width: auto; height: auto; }
+header nav li {width: 105px; background-color: red; padding: 8px;margin-bottom: 10px;font-family: "Sertig"; text-align: center;}
+header nav li a {width: 125px; height: 40px;  text-decoration: none; color: #fcf1e6;}
+header nav #compte { background-color: #404040;margin-bottom: 60px;}
+header nav #accueil { background-color: #500065;}
+header nav #revues { background-color: #bd0022;}
+header nav #aPropos { background-color: #ff9b00;}
+header nav #aide { background-color: #0062b1;}
+
+header #logo {position: absolute; float: left; width: auto; top: 18px; left: 200px;}
+header #logo img{/*float: right; right: 20px;*/ width: 72%;}
+
+
+/*********************************MAP*/
+#map-canvas {
+width: 100%;
+z-index: 1;
+}
