@@ -1,9 +1,13 @@
+html,body {
+margin: 0; padding: 0;
+background-color: #500065;
+}
 
 
 /**************DROP JQUERY*/
 
-.draggable { width: 600px; float: left;  border-right: 1em solid pink; background-color: white;}
-#containment-wrapper { 	position: absolute; left: -500px; width: 1200px; }
+.menu { width: 40%; left:0; position: absolute;  border-right: 1em solid #500065; background-color: white; z-index: 1000; margin-top: 1em;}
+/*#containment-wrapper { 	position: absolute; left: -500px; width: 1200px; }*/
 	
 /**********************HEADER */
 
@@ -26,4 +30,22 @@ header #logo img{/*float: right; right: 20px;*/ width: 72%;}
 #map-canvas {
 width: 100%;
 z-index: 1;
+position: fixed;
+left:0;	
+background-color: #7D0076;
+border-top: 1em solid white;
+}
+
+/***************/
+.navarrow {
+position: fixed; bottom: 4%; left: 5%; width: 20%; z-index:2000;
+
+}
+.navarrow button {
+float: left;
+color: white;
+border:0;
+background-color: rgba(0,0,0,0);
+padding: 0em 0.5em;
+margin: 0em 0.2em 0em 0em;
 }
