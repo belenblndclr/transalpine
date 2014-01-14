@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
 	<meta charset="utf-8">
-	<title>animate demo</title>
+	<title>Archive Médiévale TransAlpine</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
