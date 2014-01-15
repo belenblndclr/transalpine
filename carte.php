@@ -5,9 +5,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
-	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script src="js/util.js"></script>
 	<script src="js/ion.rangeSlider.js"></script>
 	<script src="js/ion.rangeSlider.min.js"></script>
