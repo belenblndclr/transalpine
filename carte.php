@@ -5,7 +5,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
 	<script src="js/util.js"></script>
 	<script src="js/ion.rangeSlider.js"></script>
 	<script src="js/ion.rangeSlider.min.js"></script>
@@ -15,7 +17,12 @@
 <html style="height: 100%;">
   <body style="height: 100%;">  
 	<?php require('id_connexion.php');	?>
-	<div class="menu" style="height: 90%; background-color: white;">
+	<div class="menu" style="height: 100%;">
+		<div class="navarrow" style="">
+			<button id="ouv">Ouvert</button> 
+			<button id="miouv">Mi Ouvert</button>	
+			<button id="ferm">Ferme</button>	
+		</div>
 		<header>
 			<nav>
 			  <ul>
@@ -34,9 +41,9 @@
 		<div class="form">
 			<form>
 				<fieldset>
-				<legend>Régions</legend>
+				<legend>Réons</legend>
 					<input type="checkbox" name="savoie" id="savoie" /> <label for="savoie">Savoie</label>
-					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Piemont</label>
+					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Piémont</label>
 					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">Dauphiné</label>
 					<input type="checkbox" name="suisse" id="suisse" /> <label for="suisse">Suisse</label>
 				</fieldset>
@@ -67,17 +74,12 @@
 	</div>
 
 	<section id="content" style="height: 100%;">
-		<div class="content" style="height: 90%;"></div>
-			<div class="accueilpage">
-				<div class="section pres">
-					<h1>L'histoire opère lentement</h1>
-					<p> Mesdames, messieurs, l'effort prioritaire en faveur du statut précaire des exclus doit nous amener au choix réellement impératif d'une restructuration dans laquelle chacun pourra enfin retrouver sa dignité.</p>
-					<p>Je me tiens devant vous et vous dis que la politique globale mondialiste conforte mon désir incontestable d'aller dans le sens d'un plan correspondant véritablement aux exigences légitimes de chacun.</p>
-				</div>
-				<div class="section part">
-					<p>Réalisé avec le soutient de</p>
-				</div>
-			</div>
+		<div id="map-canvas" class="content map-canvas" style="height: 100%;"></div>
+			<?php
+				$sql='SELECT * FROM map;';
+				$req=$bdd->query($sql);
+				require('map.php');
+			?>
 		</div>
 	</section>
 	

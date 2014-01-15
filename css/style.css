@@ -1,51 +1,66 @@
-html,body {
-margin: 0; padding: 0;
-background-color: #500065;
+@font-face {
+  font-family: "Sertig";
+  src: url(Sertig.otf) format("opentype");
 }
+@font-face {
+  font-family: "SubtleLight";
+  src: url(SubtleSansLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "SubtleRegular";
+  src: url(SubtleSansRegular.ttf) format("truetype");
+}
+
+/***** GENERAL */
+html,body { margin: 0; padding: 0; font-family: Sertig; letter-spacing: 0.05em;}
+ul, li {list-style: none;}
 
 
 /**************DROP JQUERY*/
 
-.menu { width: 40%; left:0; position: absolute;  border-right: 1em solid #500065; background-color: white; z-index: 1000; margin-top: 1em;}
+.menu { width: 30%; left:0; position: absolute;  border-right: 1em solid #7D0076; background-color: #fcfcfc; z-index: 1000;}
 /*#containment-wrapper { 	position: absolute; left: -500px; width: 1200px; }*/
 	
 /**********************HEADER */
 
-header {margin-left: 20px;width: auto;}
-header nav {width: 121px; height: auto;}
-header nav ul {width: auto; height: auto; }
-header nav li {width: 105px; background-color: red; padding: 8px;margin-bottom: 10px;font-family: "Sertig"; text-align: center;}
-header nav li a {width: 125px; height: 40px;  text-decoration: none; color: #fcf1e6;}
-header nav #compte { background-color: #404040;margin-bottom: 60px;}
-header nav #accueil { background-color: #500065;}
-header nav #revues { background-color: #bd0022;}
-header nav #aPropos { background-color: #ff9b00;}
-header nav #aide { background-color: #0062b1;}
+header {margin-left: 0;width: auto;}
+header nav {width: 6em; height: auto;}
+header nav ul {width: auto; height: auto; padding: 0 1em ;}
+header nav li {width: 6em; background-color: red; padding: 0.3em;margin-bottom: 0.5em; text-align: center;}
+header nav li a {width: 6em;text-decoration: none; color: #fcf1e6; font-size: 1em;}
+header nav .compte { background-color: #404040;margin-bottom: 60px;}
+header nav .accueil { background-color: #500065;}
+header nav .revues { background-color: #bd0022;}
+header nav .aPropos { background-color: #ff9b00;}
+header nav .aide { background-color: #0062b1;}
 
 header #logo {position: absolute; float: left; width: auto; top: 18px; left: 200px;}
-header #logo img{/*float: right; right: 20px;*/ width: 72%;}
+header #logo img{width: 72%;}
 
 
 /*********************************MAP*/
-#map-canvas {
-width: 100%;
-z-index: 1;
-position: fixed;
-left:0;	
-background-color: #7D0076;
-border-top: 1em solid white;
+.content { width: 100%; z-index: 1; position: fixed; left:0;	 background-color: red;}
+
+.accueilpage {
+margin-left: 40%;
+height:90%;
+text-align: left;
+padding-top: 1em;
+}
+.accueilpage .pres p { font-size: 0.9em; width: 30em; line-height: 1.1em;}
+.accueilpage h1 { font-weight: 100; font-size: 3em; }
+.accueilpage .section {padding-left: 2em;}
+.accueilpage .pres {height: 62%;}
+
+.accueilpage .part{ background-color:#7D0076; padding-top: 0.5em; height: 30%;}
+.map-canvas{
+
 }
 
 /***************/
-.navarrow {
-position: fixed; bottom: 4%; left: 5%; width: 20%; z-index:2000;
+.navarrow { position: fixed; bottom: 4%; left: 5%; width: 20%; z-index:2000; }
 
-}
-.navarrow button {
-float: left;
-color: white;
-border:0;
-background-color: rgba(0,0,0,0);
-padding: 0em 0.5em;
-margin: 0em 0.2em 0em 0em;
-}
+.navarrow button { float: left; color: black; border:0; background-color: rgba(0,0,0,0); 
+padding: 0em 0.5em; margin: 0em 0.2em 0em 0em; }
+
+
