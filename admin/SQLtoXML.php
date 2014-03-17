@@ -21,7 +21,7 @@
 		<?php
 			require('../id_connexion.php');
 
-			$sql='SELECT * FROM map;';
+			$sql='SELECT * FROM document;';
 			$req=$bdd->query($sql);
 
 			$filename= "../xml/point.xml";
@@ -35,7 +35,14 @@
 			$xml = '<?xml version="1.0" encoding="utf-8" standalone="yes" ?>';
 			$xml .= '<markers>';
 			while ($point = $req->fetch(PDO::FETCH_OBJ)){
-				$xml .= "<marker id='".$point->id."' lng='".$point->longitude."' lat='".$point->latitude."' description='".nl2br("&lt;div class=\"window\"&gt;".$point->ville."&lt;br /&gt;&lt;br /&gt;".$point->description."&lt;/div&gt;")."' />";
+				$xml .= "<marker id='".$point->IDDOC."'
+				lng='".$point->longitude."' 
+				lat='".$point->latitude."'  
+				date='".$point->DATE."'
+				siecle='".$point->SIECLE."'
+				region='".$point->IDREGION."'
+				typologoie='".$point->TYPOLOGIE."'
+				info='".nl2br("&lt;div class=\"window\"&gt;".$point->IDREGION."".$point->SIECLE."&lt;br /&gt;&lt;br /&gt;".$point->DATE."&lt;/div&gt;")."' />";
 			} //fin de la boucle while
 			$xml .= '</markers>';
 

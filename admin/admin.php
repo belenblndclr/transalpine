@@ -25,15 +25,15 @@
 			<?php
 				require('../id_connexion.php');
 
-				$req = $bdd->query('SELECT * FROM map ORDER BY ville ASC');
+				$req = $bdd->query('SELECT * FROM document ORDER BY IDDOC ASC');
 				while($data = $req->fetch()){
 					echo '<div class="comment">';
-					echo '<a class="delete" href="delete.php?p='.$data['id'].'"><img src="../images/false.png" /></a>';
-						echo '<h3>'.stripslashes($data['ville']).'</h3>';
-						echo '<p>Description : '.stripslashes($data['description']).'</p>';
+					echo '<a class="delete" href="delete.php?p='.$data['IDDOC'].'"><img src="../images/false.png" /></a>';
+						echo '<h3>'.stripslashes($data['IDDOC']).'</h3>';
+						echo '<p>Description : '.stripslashes($data['IDREGION']).'</p>';
 						echo '<p>Longitude : '.stripslashes($data['longitude']).'</p>';
 						echo '<p>Latitude : '.stripslashes($data['latitude']).'</p>';
-						echo '<p class="edit"><a href="edit.php?p='.$data['id'].'">Editer cet article</a></p>';
+						echo '<p class="edit"><a href="edit.php?p='.$data['IDDOC'].'">Editer cet article</a></p>';
 					echo '</div>';
 				}
 				$req->closeCursor();

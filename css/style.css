@@ -1,5 +1,14 @@
+
 @font-face {
-  font-family: "Sertig";
+  font-family: "Sertig"; 
+  src: url(Sertig.otf) format("opentype");
+}
+@font-face {
+  font-family: "SubtleLight";
+  src: url(SubtleSansLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Sertig"; 
   src: url(Sertig.otf) format("opentype");
 }
 @font-face {
@@ -11,18 +20,18 @@
   src: url(SubtleSansRegular.ttf) format("truetype");
 }
 
-/***** GENERAL */
-html,body { margin: 0; padding: 0; font-family: Sertig; letter-spacing: 0.05em;}
-ul, li {list-style: none;}
+/*************************** GENERAL */
+html,body { margin: 0; padding: 0; font-family: Sertig; }
+ul, li { list-style: none;}
 
 
-/**************DROP JQUERY*/
-
+/****************** DROP JQUERY*/
 .menu { width: 30%; left:0; position: absolute;  border-right: 1em solid #7D0076; background-color: #fcfcfc; z-index: 1000;}
-/*#containment-wrapper { 	position: absolute; left: -500px; width: 1200px; }*/
+.menuapropos { border-color:#FF9B00;}
+.menurevue { border-color:#BD0022;}
+.menuaide { border-color:#0062B1;}
 	
-/**********************HEADER */
-
+/****************** HEADER */
 header {margin-left: 0;width: auto;}
 header nav {width: 6em; height: auto;}
 header nav ul {width: auto; height: auto; padding: 0 1em ;}
@@ -34,33 +43,51 @@ header nav .revues { background-color: #bd0022;}
 header nav .aPropos { background-color: #ff9b00;}
 header nav .aide { background-color: #0062b1;}
 
-header #logo {position: absolute; float: left; width: auto; top: 18px; left: 200px;}
-header #logo img{width: 72%;}
+header #logo {position: absolute; float: left; width: auto; top: 18px; left: 150px; margin-top: 0.9em;}
+header #logo img{width: 98%;}
+
+/****************** MAP*/
+.content { z-index: 1; position: fixed; left:0;}
 
 
-/*********************************MAP*/
-.content { width: 100%; z-index: 1; position: fixed; left:0;	 background-color: red;}
+/****************** PAGES*/
+.page { padding-left:30%; height:95%; text-align: left; padding-top: 1em; background-color:white; }
+.page h1 { font-weight: 100; font-size: 3em; }
+.page .section { padding-left: 2em;}
+.page .two{ background-color:#7D0076; padding-top: 0.5em; height: 30%;}
+.page  p { width: auto; margin-top: 0em; margin-bottom: 2em;}
+.page h2 { text-transform:uppercase; font-weight: 100; padding:0; margin-top:2em; margin-bottom: 0em; font-size: 1.5em; letter-spacing: -0.03em;}
 
-.accueilpage {
-margin-left: 40%;
-height:90%;
-text-align: left;
-padding-top: 1em;
-}
-.accueilpage .pres p { font-size: 0.9em; width: 30em; line-height: 1.1em;}
-.accueilpage h1 { font-weight: 100; font-size: 3em; }
-.accueilpage .section {padding-left: 2em;}
-.accueilpage .pres {height: 62%;}
+/********* ACCUEIL*/
+.accueilpage .one p { font-size: 0.9em; width: 30em; line-height: 1.1em;}
+.accueilpage .one { height: 62%;}
 
-.accueilpage .part{ background-color:#7D0076; padding-top: 0.5em; height: 30%;}
-.map-canvas{
+/********* APROPOS*/
+.apropospage .one { height: 62%;}
+.apropospage h2 {color: #FF9B00;}
 
-}
+/********* REVUE*/
+.revuepage {padding-top: 0;}
+.revuepage .one { background-color:#BD0022; height: 50%; padding-top: 1em;}
+.revuepage .two {background-color: white;}
 
-/***************/
-.navarrow { position: fixed; bottom: 4%; left: 5%; width: 20%; z-index:2000; }
+/********* AIDE*/
 
-.navarrow button { float: left; color: black; border:0; background-color: rgba(0,0,0,0); 
-padding: 0em 0.5em; margin: 0em 0.2em 0em 0em; }
+/****************** NAVIGATION*/
+#navarrow { width: 100px; position: relative; display:block;margin-left:20px;/*bottom: 4%; left: 5%;*/  z-index:2000; }
+
+#navarrow button { width:20px; height: 20px; border-radius: 50%; float: left;  cursor: pointer;color: black; border:0; background-color: #7D0076; padding: 0em 0.5em; margin: 0em 0.2em 0em 0em; }
+
+#navarrow button:hover{background-color: #D1D1D1;}
+
+/****************** RECHERCHE*/
+fieldset {background-color: #E4E4E4; margin: 2.3em 1em; padding: 0em; border: none; }
+fieldset legend {width: 50px; float: right; padding: 0.4em 3em;  margin-left: 1em; color: #7D0076; background-color: #D1D1D1; font-weight: bold;}
+fieldset input {display: none;}
+fieldset label {display:block; float:right; cursor: pointer; color: #9E9E9E; padding: 0.4em 0.2em;/* border-right: 1px solid #9E9E9E;*/}
+fieldset label:hover {color: #7D0076;}
+fieldset label:active {color: #7D0076;}
+
+fieldset #ref {display: block; float: right;margin: 0.4em 0.2em;}
 
 

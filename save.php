@@ -1,11 +1,13 @@
-﻿<!doctype html>
+<!doctype html>
 <head>
 	<meta charset="utf-8">
 	<title>Archive TransAlpine</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script src="js/util.js"></script>
 	<script src="js/ion.rangeSlider.js"></script>
 	<script src="js/ion.rangeSlider.min.js"></script>
@@ -15,15 +17,20 @@
 <html style="height: 100%;">
   <body style="height: 100%;">  
 	<?php require('id_connexion.php');	?>
-	<div class="menu" style="height: 90%; background-color: white;">
+	<div class="menu" style="height: 100%;">
+		<div class="navarrow" style="">
+			<button id="ouv">Ouvert</button> 
+			<button id="miouv">Mi Ouvert</button>	
+			<button id="ferm">Ferme</button>	
+		</div>
 		<header>
 			<nav>
 			  <ul>
 				<li class="compte"><a href="admin/">Mon compte</a></li>
-				<li class="accueil"><a href="index.php">Accueil</a></li>
-				<li class="revues"><a href="revues.php">Revues</a></li>
-				<li class="aPropos"><a href="apropos.php">A propos</a></li>
-				<li class="aide"><a href="aide.php">Aide</a></li>
+				<li class="accueil"><a href="#">Accueil</a></li>
+				<li class="revues"><a href="#">Revues</a></li>
+				<li class="aPropos"><a href="#">A propos</a></li>
+				<li class="aide"><a href="#">Aide</a></li>
 			  </ul>   
 			</nav>
 			<div id="logo">
@@ -34,14 +41,14 @@
 		<div class="form">
 			<form>
 				<fieldset>
-				<legend>Régions</legend>
-					<input type="checkbox" name="savoie" id="savoie" /> <label for=	"savoie">Savoie</label>
-					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Piemont</label>
-					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">Dauphiné</label>
+				<legend>R�gions</legend>
+					<input type="checkbox" name="savoie" id="savoie" /> <label for="savoie">Savoie</label>
+					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Pi�mont</label>
+					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">Dauphin�</label>
 					<input type="checkbox" name="suisse" id="suisse" /> <label for="suisse">Suisse</label>
 				</fieldset>
 				<fieldset>
-				<legend>Siècles</legend>
+				<legend>Si�cles</legend>
 					<input type="text" id="siecle" name="rangeName" value="10;100"/>
 				</fieldset>
 				<fieldset>
@@ -55,11 +62,11 @@
 				</fieldset>
 				<fieldset>
 				<legend>Typologie</legend>
-					<input type="checkbox" name="compta" id="compta" /> <label for="compta">Comptabilité</label>
+					<input type="checkbox" name="compta" id="compta" /> <label for="compta">Comptabilit�</label>
 					<input type="checkbox" name="chartre" id="chartre" /> <label for="chartre">Chartres</label>
 				</fieldset>
 				<fieldset>
-				<legend>Référence</legend>
+				<legend>R�f�rence</legend>
 					<input type="text" name="ref" id="ref" /> <label for="ref">Choisissez</label>
 				</fieldset>
 			</form>
@@ -67,16 +74,12 @@
 	</div>
 
 	<section id="content" style="height: 100%;">
-			<div class="page accueilpage">
-				<div class="section one">
-					<h1>L'histoire opère lentement</h1>
-					<p> Mesdames, messieurs, l'effort prioritaire en faveur du statut précaire des exclus doit nous amener au choix réellement impératif d'une restructuration dans laquelle chacun pourra enfin retrouver sa dignité.</p>
-					<p>Je me tiens devant vous et vous dis que la politique globale mondialiste conforte mon désir incontestable d'aller dans le sens d'un plan correspondant véritablement aux exigences légitimes de chacun.</p>
-				</div>
-				<div class="section two">
-					<p>Réalisé avec le soutient de</p>
-				</div>
-			</div>
+		<div id="map-canvas" class="map-canvas" style="height: 100%;"></div>
+			<?php
+				$sql='SELECT * FROM document;';
+				$req=$bdd->query($sql);
+				require('map.php');
+			?>
 		</div>
 	</section>
 	
@@ -91,7 +94,7 @@
 		});
 		
 		$( "#ferm" ).click(function(){
-			$( ".menu" ).animate({ "left": "-40%" }, "slow" );
+			$( ".menu" ).animate({ "left": "-30%" }, "slow" );
 		});
 	</script>
 	
@@ -103,7 +106,7 @@
 			to: 11	,                         // overwrite default TO setting
 			type: "double",                 // slider type
 			step: 1,                       // slider step
-			postfix: "ème",             // postfix text
+			postfix: "�me",             // postfix text
 			hasGrid: false,                  // enable grid
 			hideMinMax: false,               // hide Min and Max fields
 			hideFromTo: true,               // hide From and To fields

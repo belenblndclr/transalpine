@@ -74,7 +74,7 @@
     }
     .irs-max {
         position: absolute; display: block;
-        right: 0;
+        right: 150px; /*0 à la base*/
         cursor: default;
     }
 

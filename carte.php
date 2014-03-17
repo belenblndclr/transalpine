@@ -18,11 +18,7 @@
   <body style="height: 100%;">  
 	<?php require('id_connexion.php');	?>
 	<div class="menu" style="height: 100%;">
-		<div class="navarrow" style="">
-			<button id="ouv">Ouvert</button> 
-			<button id="miouv">Mi Ouvert</button>	
-			<button id="ferm">Ferme</button>	
-		</div>
+		
 		<header>
 			<nav>
 			  <ul>
@@ -41,11 +37,11 @@
 		<div class="form">
 			<form>
 				<fieldset>
-				<legend>Réons</legend>
-					<input type="checkbox" name="savoie" id="savoie" /> <label for="savoie">Savoie</label>
-					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Piémont</label>
-					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">Dauphiné</label>
-					<input type="checkbox" name="suisse" id="suisse" /> <label for="suisse">Suisse</label>
+				<legend>Régions</legend>
+					<input type="checkbox" name="region" id="savoie" value="1" /> <label for="savoie">Savoie</label>
+					<input type="checkbox" name="region" id="piemont" value="2"/> <label for="piemont">Piémont</label>
+					<input type="checkbox" name="region" id="dauphine" value="3"/> <label for="dauphine">Dauphiné</label>
+					<input type="checkbox" name="region" id="suisse" value="4"/> <label for="suisse">Suisse</label>
 				</fieldset>
 				<fieldset>
 				<legend>Siècles</legend>
@@ -72,11 +68,18 @@
 			</form>
 		</div>
 	</div>
+	
+	<div id="navarrow" style="position: fixed; bottom: 1em;">
+		<button id="ferm"></button> <!--Ferme-->
+		<button id="miouv"></button> <!--Mi Ouvert-->
+		<button id="ouv"></button> <!--Ouvert-->
+	</div>
+
 
 	<section id="content" style="height: 100%;">
-		<div id="map-canvas" class="content map-canvas" style="height: 100%;"></div>
+		<div id="map-canvas" style="height: 100%;"></div>
 			<?php
-				$sql='SELECT * FROM map;';
+				$sql='SELECT * FROM document;';
 				$req=$bdd->query($sql);
 				require('map.php');
 			?>
@@ -94,7 +97,7 @@
 		});
 		
 		$( "#ferm" ).click(function(){
-			$( ".menu" ).animate({ "left": "-40%" }, "slow" );
+			$( ".menu" ).animate({ "left": "-30%" }, "slow" );
 		});
 	</script>
 	
@@ -120,5 +123,24 @@
 			}
 		});
 	</script>
+	<!--
+	<script>
+		$("input:checkbox").bind( "change", function() 
+		{
+			$.each(markers, function(index, m) 
+			{
+				console.log(m); // récup les check checked et vérif si correspondance
+				if($("input:checkbox[name='region'][value='"+m.region+"']").is(':checked'))
+				{
+					m.setVisible(true);
+				} 
+				else
+				{
+					m.setVisible(false);
+				}
+			})
+		});
+		
+	</script>-->
   </body>
 </html>

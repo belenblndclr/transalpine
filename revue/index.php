@@ -1,4 +1,4 @@
-ï»¿<!doctype html>
+<!doctype html>
 <head>
 	<meta charset="utf-8">
 	<title>Archive TransAlpine</title>
@@ -20,10 +20,10 @@
 			<nav>
 			  <ul>
 				<li class="compte"><a href="admin/">Mon compte</a></li>
-				<li class="accueil"><a href="index.php">Accueil</a></li>
-				<li class="revues"><a href="revues.php">Revues</a></li>
-				<li class="aPropos"><a href="apropos.php">A propos</a></li>
-				<li class="aide"><a href="aide.php">Aide</a></li>
+				<li class="accueil"><a href="#">Accueil</a></li>
+				<li class="revues"><a href="#">Revues</a></li>
+				<li class="aPropos"><a href="#">A propos</a></li>
+				<li class="aide"><a href="#">Aide</a></li>
 			  </ul>   
 			</nav>
 			<div id="logo">
@@ -34,14 +34,14 @@
 		<div class="form">
 			<form>
 				<fieldset>
-				<legend>RÃ©gions</legend>
+				<legend>Régions</legend>
 					<input type="checkbox" name="savoie" id="savoie" /> <label for=	"savoie">Savoie</label>
 					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Piemont</label>
-					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">DauphinÃ©</label>
+					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">Dauphiné</label>
 					<input type="checkbox" name="suisse" id="suisse" /> <label for="suisse">Suisse</label>
 				</fieldset>
 				<fieldset>
-				<legend>SiÃ¨cles</legend>
+				<legend>Siècles</legend>
 					<input type="text" id="siecle" name="rangeName" value="10;100"/>
 				</fieldset>
 				<fieldset>
@@ -55,11 +55,11 @@
 				</fieldset>
 				<fieldset>
 				<legend>Typologie</legend>
-					<input type="checkbox" name="compta" id="compta" /> <label for="compta">ComptabilitÃ©</label>
+					<input type="checkbox" name="compta" id="compta" /> <label for="compta">Comptabilité</label>
 					<input type="checkbox" name="chartre" id="chartre" /> <label for="chartre">Chartres</label>
 				</fieldset>
 				<fieldset>
-				<legend>RÃ©fÃ©rence</legend>
+				<legend>Référence</legend>
 					<input type="text" name="ref" id="ref" /> <label for="ref">Choisissez</label>
 				</fieldset>
 			</form>
@@ -67,14 +67,14 @@
 	</div>
 
 	<section id="content" style="height: 100%;">
-			<div class="page accueilpage">
-				<div class="section one">
-					<h1>L'histoire opÃ¨re lentement</h1>
-					<p> Mesdames, messieurs, l'effort prioritaire en faveur du statut prÃ©caire des exclus doit nous amener au choix rÃ©ellement impÃ©ratif d'une restructuration dans laquelle chacun pourra enfin retrouver sa dignitÃ©.</p>
-					<p>Je me tiens devant vous et vous dis que la politique globale mondialiste conforte mon dÃ©sir incontestable d'aller dans le sens d'un plan correspondant vÃ©ritablement aux exigences lÃ©gitimes de chacun.</p>
+			<div class="accueilpage">
+				<div class="section pres">
+					<h1>L'histoire opère lentement</h1>
+					<p> Mesdames, messieurs, l'effort prioritaire en faveur du statut précaire des exclus doit nous amener au choix réellement impératif d'une restructuration dans laquelle chacun pourra enfin retrouver sa dignité.</p>
+					<p>Je me tiens devant vous et vous dis que la politique globale mondialiste conforte mon désir incontestable d'aller dans le sens d'un plan correspondant véritablement aux exigences légitimes de chacun.</p>
 				</div>
-				<div class="section two">
-					<p>RÃ©alisÃ© avec le soutient de</p>
+				<div class="section part">
+					<p>Réalisé avec le soutient de</p>
 				</div>
 			</div>
 		</div>
@@ -103,7 +103,7 @@
 			to: 11	,                         // overwrite default TO setting
 			type: "double",                 // slider type
 			step: 1,                       // slider step
-			postfix: "Ã¨me",             // postfix text
+			postfix: "ème",             // postfix text
 			hasGrid: false,                  // enable grid
 			hideMinMax: false,               // hide Min and Max fields
 			hideFromTo: true,               // hide From and To fields

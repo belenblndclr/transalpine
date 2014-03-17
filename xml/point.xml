@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?><markers><marker id='9' lng='1.000000' lat='1.000000' description='&lt;div class="window"&gt;Annecy&lt;br /&gt;&lt;br /&gt;1/1&lt;/div&gt;' /></markers>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><markers><marker id='0'
+				lng='6.157200' 
+				lat='46.918630'  
+				date='2014-03-01'
+				region='2'
+				siecle='21'
+				typologoie='Inc'
+				info='&lt;div class="window"&gt;2&lt;br /&gt;&lt;br /&gt;2014-03-01&lt;/div&gt;' /><marker id='1'
+				lng='6.157969' 
+				lat='45.918623'  
+				date='2014-03-01'
+				region='1'
+				siecle='21'
+				typologoie='Inc'
+				info='&lt;div class="window"&gt;1&lt;br /&gt;&lt;br /&gt;2014-03-01&lt;/div&gt;' /></markers>
