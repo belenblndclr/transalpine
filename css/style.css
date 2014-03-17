@@ -68,8 +68,11 @@ header #logo img{width: 98%;}
 
 /********* REVUE*/
 .revuepage {padding-top: 0;}
-.revuepage .one { background-color:#BD0022; height: 50%; padding-top: 1em;}
-.revuepage .two {background-color: white;}
+.revuepage .one { background-color:#BD0022; height: 50%; padding-top: 1em; padding-left: 20em;}
+.revuepage .two {background-color: white; padding-left: 5em; padding-top: 2em;}
+.revuepage .two .datarevu {width: 7em; float: left; color: #BD0022;}
+.revuepage .two h1 { margin:0; padding:0; font-size: 2em; margin-bottom: 0.5em;}
+.revuepage .two .previewrevue {margin-left: 7em; width: 35em; text-align: justify;}
 
 /********* AIDE*/
 

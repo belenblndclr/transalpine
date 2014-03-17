@@ -3,6 +3,7 @@
 	<meta charset="utf-8">
 	<title>Archive TransAlpine</title>
 	<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <html style="height: 100%;">
@@ -49,15 +50,21 @@
 					while($data = mysql_fetch_array($req)) 
 						{
 						// on affiche les informations de l'enregistrement en cours
-						echo '<h1>'.$data['TITRE'].' </h1> <img src=".'.$data['COUV'].'" /> <br> ('.$data['DATEPUBLICATION'].')'; 
-						echo ' <i>date de naissance : '.$data['PREVIEW'].'</i><br>'; 
-						} 
+						echo '<img class="couvrevue" src=".'.$data['COUV'].'" /> 
+				</div>
+				<div class="section two">';
+						echo '<p class="datarevu"><b>Publié le </b>'.$data['DATEPUBLICATION'].'<br><br>
+						<b>Référence </b>'.$data['REFERENCE'].'<br><br>
+						<a href="'.$data['URLPDF'].'" target="_blank">Télécharger</a></p>
+						<h1>'.$data['TITRE'].' </h1> 
+						<p class="previewrevue">';
+						echo $data['PREVIEW']; 
+					} 
 
 					// on ferme la connexion à mysql
 					mysql_close(); 
 					?>  
-				</div>
-				<div class="section two">
+					</p>
 				</div>
 			</div>
 		</div>
