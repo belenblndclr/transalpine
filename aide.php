@@ -16,7 +16,7 @@
 				<li class="accueil"><a href="index.php">Accueil</a></li>
 				<li class="revues"><a href="revues.php">Revues</a></li>
 				<li class="aPropos"><a href="apropos.php">A propos</a></li>
-				<li class="aide"><a href="aide.php">Aide</a></li>
+				<li class="aide in"><a href="aide.php">Aide</a></li>
 			  </ul>   
 			</nav>
 			<div id="logo">

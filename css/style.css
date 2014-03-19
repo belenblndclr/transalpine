@@ -1,41 +1,40 @@
-
 @font-face {
   font-family: "Sertig"; 
-  src: url(Sertig.otf) format("opentype");
+  src: url(font/Sertig.otf) format("opentype");
 }
 @font-face {
   font-family: "SubtleLight";
-  src: url(SubtleSansLight.ttf) format("truetype");
+  src: url(font/SubtleSansLight.ttf) format("truetype");
 }
 @font-face {
   font-family: "Sertig"; 
-  src: url(Sertig.otf) format("opentype");
+  src: url(font/Sertig.otf) format("opentype");
 }
 @font-face {
   font-family: "SubtleLight";
-  src: url(SubtleSansLight.ttf) format("truetype");
+  src: url(font/SubtleSansLight.ttf) format("truetype");
 }
 @font-face {
   font-family: "SubtleRegular";
-  src: url(SubtleSansRegular.ttf) format("truetype");
+  src: url(font/SubtleSansRegular.ttf) format("truetype");
 }
 
 /*************************** GENERAL */
 html,body { margin: 0; padding: 0; font-family: Sertig; }
 ul, li { list-style: none;}
+a  {color: #6D6D6D;}
 
-
-/****************** DROP JQUERY*/
-.menu { width: 30%; left:0; position: absolute;  border-right: 1em solid #7D0076; background-color: #fcfcfc; z-index: 1000;}
+/****************** MENU*/
+.menu { width: 25em; left:0; position: absolute;  border-right: 1em solid #7D0076; background-color: #fcfcfc; z-index: 1000;}
 .menuapropos { border-color:#FF9B00;}
 .menurevue { border-color:#BD0022;}
 .menuaide { border-color:#0062B1;}
 	
-/****************** HEADER */
+/****************** HEADER*/
 header {margin-left: 0;width: auto;}
 header nav {width: 6em; height: auto;}
-header nav ul {width: auto; height: auto; padding: 0 1em ;}
-header nav li {width: 6em; background-color: red; padding: 0.3em;margin-bottom: 0.5em; text-align: center;}
+header nav ul {width: auto; height: auto; padding: 0 1em ; }
+header nav li {width: 6em; padding: 0.3em;margin-bottom: 0.5em; text-align: center; box-shadow: 0 0 0.2em rgba(0,0,0,0.4);}
 header nav li a {width: 6em;text-decoration: none; color: #fcf1e6; font-size: 1em;}
 header nav .compte { background-color: #404040;margin-bottom: 60px;}
 header nav .accueil { background-color: #500065;}
@@ -46,25 +45,43 @@ header nav .aide { background-color: #0062b1;}
 header #logo {position: absolute; float: left; width: auto; top: 18px; left: 150px; margin-top: 0.9em;}
 header #logo img{width: 98%;}
 
+header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder;}
+
+
+
+/****************** CONTACT*/
+.contact {width: auto; background-color: #404040; position: fixed; bottom: 0; right: 0; color: white; padding: 0.2em; margin: 0.1em;}
+
 /****************** MAP*/
 .content { z-index: 1; position: fixed; left:0;}
 
 
 /****************** PAGES*/
-.page { padding-left:30%; height:95%; text-align: left; padding-top: 1em; background-color:white; }
+.page { padding-left:25em; height:95%; text-align: left; padding-top: 1em; background-color:white; }
 .page h1 { font-weight: 100; font-size: 3em; }
 .page .section { padding-left: 2em;}
 .page .two{ background-color:#7D0076; padding-top: 0.5em; height: 30%;}
 .page  p { width: auto; margin-top: 0em; margin-bottom: 2em;}
 .page h2 { text-transform:uppercase; font-weight: 100; padding:0; margin-top:2em; margin-bottom: 0em; font-size: 1.5em; letter-spacing: -0.03em;}
+.one {height: 62%}
 
 /********* ACCUEIL*/
 .accueilpage .one p { font-size: 0.9em; width: 30em; line-height: 1.1em;}
-.accueilpage .one { height: 62%;}
+
 
 /********* APROPOS*/
-.apropospage .one { height: 62%;}
-.apropospage h2 {color: #FF9B00;}
+.apropospage {padding-top: 0;}
+.apropospage h1 {margin-top: 0; text-shadow: 0.02em 0.02em 0 rgba(255,255,255,0.5); font-weight: 600;}
+.apropospage h2 {padding:0; margin:0;}
+.apropospage span{float: left; width: 25%; text-align: center;}
+.apropospage p{ visibility: hidden; margin:0; padding:0;}
+.apropospage .a:hover  > p, .apropospage .b:hover  > p, .apropospage .c:hover  > p, .apropospage .d:hover  > p {visibility: visible;}
+.apropospage .two {height: 5em; background-color: #FF9B00; bottom: 0; position: fixed; width: 100%;}
+
+/** TAILLE ICON*/
+.xl {width: 15em; font-size: 10em; opacity: 0.8; color: #333333;text-shadow: 0 0 0.6em rgba(0,0,0,0.2);  margin: 0; padding: 0; height: 20em;}
+.xs { font-size: 0.8em; opacity: 0.5; color: #404040;text-shadow: 0 0 0.1em rgba(0,0,0,0.1); }
+.l {font-size: 4em; float: right; margin: 0 1em ;}
 
 /********* REVUE*/
 .revuepage {padding-top: 0;}

@@ -23,10 +23,10 @@
 			<nav>
 			  <ul>
 				<li class="compte"><a href="admin/">Mon compte</a></li>
-				<li class="accueil"><a href="#">Accueil</a></li>
-				<li class="revues"><a href="#">Revues</a></li>
-				<li class="aPropos"><a href="#">A propos</a></li>
-				<li class="aide"><a href="#">Aide</a></li>
+				<li class="accueil"><a href="index.php">Accueil</a></li>
+				<li class="revues"><a href="revues.php">Revues</a></li>
+				<li class="aPropos"><a href="apropos.php">A propos</a></li>
+				<li class="aide"><a href="aide.php">Aide</a></li>
 			  </ul>   
 			</nav>
 			<div id="logo">
@@ -84,6 +84,11 @@
 				require('map.php');
 			?>
 		</div>
+	</section>
+	
+	
+	<section class="contact">
+		 0xe839
 	</section>
 	
 	
