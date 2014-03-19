@@ -110,4 +110,6 @@ fieldset label:active {color: #7D0076;}
 
 fieldset #ref {display: block; float: right;margin: 0.4em 0.2em;}
 
+form fieldset:last-child  legend { background-color: red;} 
+
 
