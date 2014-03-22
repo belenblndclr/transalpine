@@ -22,7 +22,8 @@
 /*************************** GENERAL */
 html,body { margin: 0; padding: 0; font-family: Sertig; }
 ul, li { list-style: none;}
-a  {color: #6D6D6D;}
+a  {color: #6D6D6D; text-decoration: none;}
+.under {text-decoration: underline;}
 
 /****************** MENU*/
 .menu { width: 25em; left:0; position: absolute;  border-right: 1em solid #7D0076; background-color: #fcfcfc; z-index: 1000;}
@@ -60,14 +61,14 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 .page { padding-left:25em; height:95%; text-align: left; padding-top: 1em; background-color:white; }
 .page h1 { font-weight: 100; font-size: 3em; }
 .page .section { padding-left: 2em;}
-.page .two{ background-color:#7D0076; padding-top: 0.5em; height: 30%;}
+.page .two{ background-color:#7D0076; padding-top: 0.5em; height: 30%; position: fixed; bottom: 0; width: 100%;}
 .page  p { width: auto; margin-top: 0em; margin-bottom: 2em;}
 .page h2 { text-transform:uppercase; font-weight: 100; padding:0; margin-top:2em; margin-bottom: 0em; font-size: 1.5em; letter-spacing: -0.03em;}
 .one {height: 62%}
 
 /********* ACCUEIL*/
 .accueilpage .one p { font-size: 0.9em; width: 30em; line-height: 1.1em;}
-
+.accueilpage .two {color: white;}
 
 /********* APROPOS*/
 .apropospage {padding-top: 0;}
@@ -81,7 +82,7 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 /** TAILLE ICON*/
 .xl {width: 15em; font-size: 10em; opacity: 0.8; color: #333333;text-shadow: 0 0 0.6em rgba(0,0,0,0.2);  margin: 0; padding: 0; height: 20em;}
 .xs { font-size: 0.8em; opacity: 0.5; color: #404040;text-shadow: 0 0 0.1em rgba(0,0,0,0.1); }
-.l {font-size: 4em; float: right; margin: 0 1em ;}
+.l {font-size: 4em; margin: 0; color: white; padding:0;}
 
 /********* REVUE*/
 .revuepage {padding-top: 0;}
@@ -101,15 +102,48 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 #navarrow button:hover{background-color: #D1D1D1;}
 
 /****************** RECHERCHE*/
-fieldset {background-color: #E4E4E4; margin: 2.3em 1em; padding: 0em; border: none; }
-fieldset legend {width: 50px; float: right; padding: 0.4em 3em;  margin-left: 1em; color: #7D0076; background-color: #D1D1D1; font-weight: bold;}
+fieldset {background-color: #E4E4E4; margin: 1.3em 1em; padding: 0; border: none; }
+fieldset legend {width: 7em; float: right; padding: 0.4em 0.5em; text-align:center; margin-left: 1em; color: #7D0076; background-color: #D1D1D1; font-weight: bold;}
 fieldset input {display: none;}
-fieldset label {display:block; float:right; cursor: pointer; color: #9E9E9E; padding: 0.4em 0.2em;/* border-right: 1px solid #9E9E9E;*/}
+fieldset label {display:block; float:right; cursor: pointer; color: #9E9E9E; margin: 0.45em 0; padding: 0 0.3em; border-right: 1px solid #9E9E9E; font-size: 0.9em;}
+fieldset label:first-of-type {border:0;}
 fieldset label:hover {color: #7D0076;}
 fieldset label:active {color: #7D0076;}
+fieldset #ref {display: block; float: right;}
+form fieldset:last-child  { background-color: white; } 
+form fieldset:last-child input[type="submit"]{ display: block; float:right; background-color: #FBA830; color: #7D0076; border: 0; height: 30px; margin:0;}
+form fieldset:last-child input[type="text"]{height: 30px; box-shadow: 0 0 0.2em rgba(0,0,0,0.2); margin-right: 0.5em; padding:0; border:0; padding-left: 0.5em; font-style: oblique; color: rgba(0,0,0,0.5);}
 
-fieldset #ref {display: block; float: right;margin: 0.4em 0.2em;}
+form fieldset:nth-last-child(2) {background-color: white;}
 
-form fieldset:last-child  legend { background-color: red;} 
+/********* ONOFF SWITCH*/
+
+
+/********* SEARCHBAR*/
+
+
+/************************** ADMIN PANEL*/
+.adminpanelbody {background-color: #404040; margin: 0; padding: 0 2em 2em 2em;color: white;}
+.adminpanel a {color: white; font-size: 0.9em;}
+.adminpanel h1 {color: white; text-shadow: 0.05em 0.05em 0 rgba(0,0,0,1); text-align: center; font-size: 4em; text-transform: uppercase; margin-top: 1em;}
+	
+.adminpanel .deco { float: right; text-align: right;}
+
+.adminpanel table {width: 100%; background-color: #303030; color: #F7F7F7;}
+.adminpanel table tr td {padding-left: 1em; border: 0;}
+.adminpanel table tr:nth-child(even) {background-color: #444444;}
+.adminpanel table thead {background-color:#282828;}
+.adminpanel table a{color: white;}
+.adminpanel table a:hover {color: #7D0076;}
+.adminpanel table tr th:first-of-type, .adminpanel table tr th:last-of-type, .adminpanel table tr th:nth-last-child(2) {width: 2em;}
+
+.adminpanel input {border-radius: 0; margin: 0 1em;}
+.adminpanel .tab-content {background-color: #141414; padding: 1em 0.2em 1em 0.2em;}
+
+
+
+
+
+
 
 

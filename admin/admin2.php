@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport"
           content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" charset="utf-8"/>
 	<title>Administration</title>
+	<link rel="stylesheet" href="../css/style.css" />
 	<link rel="stylesheet" href="../css/icon_font.css">
 	
     <link href="../css/footable/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -21,8 +22,6 @@
     <script src="../js/footable.paginate.js?v=2-0-1" type="text/javascript"></script>
     <script src="../js/bootstrap-tab.js" type="text/javascript"></script>
     <script src="../js/demos.js" type="text/javascript"></script>
-	
-	<link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="adminpanelbody">
 <div class="adminpanel">
@@ -34,7 +33,7 @@
 			
 			<h1>Administration du Site</h1>	
     
-    <ul class="nav nav-tabs" style="margin-bottom:0;">
+    <ul class="nav nav-tabs">
         <li class="active"><a href="#doc">Gestion des Documents</a></li>
         <li><a href="#revues">Gestion des Revues</a></li>
         <li><a href="#docs">Docs</a></li>
@@ -43,7 +42,14 @@
         <div class="tab-pane active" id="doc">
             <p>
                 Search: <input id="filter" type="text"/>
-                <a href="#clear" class="clear-filter" title="clear filter">[Remettre à zéro]</a>
+                Status:
+                <select class="filter-status">
+                    <option></option>
+                    <option value="active">Active</option>
+                    <option value="disabled">Disabled</option>
+                    <option value="suspended">Suspended</option>
+                </select>
+                <a href="#clear" class="clear-filter" title="clear filter">[clear]</a>
                 <span class="row-count"></span>
             </p>
             <table class="table demo" data-filter="#filter" data-page-size="5">
@@ -54,8 +60,8 @@
 							<th>Date</th>
 							<th>Siècle</th>
 							<th>Typologie</th>
-							<th></th>
-							<th></th>
+							<th>Editer</th>
+							<th>Supprimer</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -90,7 +96,7 @@
         <div class="tab-pane" id="revues">
          <p>
                 Search: <input id="filter2" type="text"/>
-                <a href="#clear" class="clear-filter" title="clear filter">[Remettre à zéro]</a>
+                <a href="#clear" class="clear-filter" title="clear filter">[clear]</a>
             </p>
             <table class="table demo" data-filter="#filter2" data-page-size="5">
                 <thead>
@@ -102,8 +108,8 @@
 					<th>Typologie</th>
 					<th>Preview</th>
 					<th>Mots clés</th>
-					<th></th>
-					<th></th>
+					<th>Editer</th>
+					<th>Supprimer</th>
                 </tr>
                 </thead>
                 <tbody>
