@@ -44,36 +44,29 @@ if($req->rowCount()==0){
  
 }
 ?>
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Archive TransAlpine</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/icon_font.css">
+</head>
 
-<!DOCTYPE html> 
-<html lang="fr"> 
- 
-	<head>	
-		<meta charset="utf-8">
-
-		<title>Blog et Markitup</title>
-		<meta name="description" content="test Google Map !">
-		<meta name="keywords" content="Google Map !">
-		<meta name="author" content="Guillaume RICHARD">
-		<meta name="geo.placename" content="Aurillac-sur-Vendinelle">
-
-		<link rel="stylesheet" href="../css/html.css">
-		<link rel="stylesheet" href="../css/style.css" />
-	</head>
-
-	<body>
-		<div id="header"></div>
-		<div id="content">
-			<form name="identif" method="POST" action="index.php">
-				<table>
-					<tr><td class="login">Login : </td><td><input type="text" name="login"></td></tr>
-					<tr><td>Mot de passe : </td><td><input type="password" name="pass"></td></tr>
-				</table>
-				<div>
-					<input id="ok" type="submit" name="action" value="OK"><br />
-				</div>
-			</form>
-		</div>
-		
-	</body>
+<html>
+  <body class="connexionpanel">  
+  <h1>Administration du Site</h1>	
+  <section class="connexionbox">
+		<form name="identif" method="POST" action="index.php">
+			<table>
+				<tr><td class="login">Identifiant  </td><td><input type="text" name="login"></td></tr>
+				<tr><td>Mot de passe  </td><td><input type="password" name="pass"></td></tr>
+			</table>
+			<input id="ok" type="submit" name="action" value="OK">
+		</form>
+	</section>
+	
+	<section class="backhome">
+	<a href="../index.php">Retour au site <i class="icon-home-circled"></i>
+	</section>
+  </body>
 </html>

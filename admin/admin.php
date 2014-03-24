@@ -35,16 +35,15 @@
 			<h1>Administration du Site</h1>	
     
     <ul class="nav nav-tabs" style="margin-bottom:0;">
-        <li class="active"><a href="#doc">Gestion des Documents</a></li>
+        <li class="active"><a href="#docs">Gestion des Documents</a></li>
         <li><a href="#revues">Gestion des Revues</a></li>
-        <li><a href="#docs">Docs</a></li>
+        <li><a href="#last">Docs</a></li>
     </ul>
     <div class="tab-content">
-        <div class="tab-pane active" id="doc">
+        <div class="tab-pane active" id="docs">
             <p>
-                Search: <input id="filter" type="text"/>
+                Rechercher un Document <input id="filter" type="text"/>
                 <a href="#clear" class="clear-filter" title="clear filter">[Remettre à zéro]</a>
-                <span class="row-count"></span>
             </p>
             <table class="table demo" data-filter="#filter" data-page-size="5">
                 <thead>
@@ -66,7 +65,7 @@
 							while($data = $req->fetch()){
 								echo '<tr>';
 									echo '<td>'.stripslashes($data['IDDOC']).'</td>';
-									echo '<td>'.stripslashes($data['IDREGION']).'</td>';
+									echo '<td class="region'.stripslashes($data['IDREGION']).'"></td>';
 									echo '<td>'.stripslashes($data['DATE']).'</td>';								
 									echo '<td>'.stripslashes($data['SIECLE']).'</td>';
 									echo '<td>'.stripslashes($data['TYPOLOGIE']).'</td>';
@@ -86,10 +85,19 @@
                 </tr>
                 </tfoot>
             </table>
+			
+			<section class="gestion_nav">
+				<a href="add_article.php" target="_top">
+					<i class="icon-location-circled"></i> Ajouter un 	Document
+				</a>
+				<a href="SQLtoXML.php">
+					<i class="icon-globe-alt"></i> Générer la carte
+				</a>
+			</section>
         </div>
         <div class="tab-pane" id="revues">
          <p>
-                Search: <input id="filter2" type="text"/>
+                Rechercher une Revue <input id="filter2" type="text"/>
                 <a href="#clear" class="clear-filter" title="clear filter">[Remettre à zéro]</a>
             </p>
             <table class="table demo" data-filter="#filter2" data-page-size="5">
@@ -134,8 +142,14 @@
                 </tr>
                 </tfoot>
             </table>
+			
+			<section class="gestion_nav">
+				<a href="add_article.php" target="_top">
+					<i class="icon-doc-new-circled"></i> Ajouter une Revue
+				</a>
+			</section>
         </div>
-        <div class="tab-pane" id="docs">
+        <div class="tab-pane" id="last">
            3
     </div>
 </div>

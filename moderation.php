@@ -8,15 +8,15 @@
 <html style="height: 100%;">
   <body style="height: 100%;">  
 	<?php require('id_connexion.php');	?>
-	<div class="menu menuaide" style="height: 100%; background-color: white; position: fixed;">
+	<div class="menu menumoderation" style="height: 100%; background-color: white; position: fixed;">
 		<header>
 			<nav>
 			  <ul>
-				<li class="compte"><a href="moderation.php">Modération</a></li>
+				<li class="compte in"><a href="moderation.php">Modération</a></li>
 				<li class="accueil"><a href="index.php">Accueil</a></li>
 				<li class="revues"><a href="revues.php">Revues</a></li>
 				<li class="aPropos"><a href="apropos.php">A propos</a></li>
-				<li class="aide in"><a href="aide.php">Aide</a></li>
+				<li class="aide"><a href="aide.php">Aide</a></li>
 			  </ul>   
 			</nav>
 			<div id="logo">
@@ -30,7 +30,7 @@
 	</div>
 
 	<section id="content" style="height: 100%;">
-			<div class="page aidepage">
+			<div class="page moderationpage">
 				<div class="section on">
 					<h1>Aide</h1>
 					<p>Text</p>

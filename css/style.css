@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-family: "Sertig"; 
   src: url(font/Sertig.otf) format("opentype");
 }
@@ -30,6 +30,7 @@ a  {color: #6D6D6D; text-decoration: none;}
 .menuapropos { border-color:#FF9B00;}
 .menurevue { border-color:#BD0022;}
 .menuaide { border-color:#0062B1;}
+.menumoderation {border-color: #404040;}
 	
 /****************** HEADER*/
 header {margin-left: 0;width: auto;}
@@ -43,7 +44,7 @@ header nav .revues { background-color: #bd0022;}
 header nav .aPropos { background-color: #ff9b00;}
 header nav .aide { background-color: #0062b1;}
 
-header #logo {position: absolute; float: left; width: auto; top: 18px; left: 150px; margin-top: 0.9em;}
+header #logo {position: absolute; float: left; width: auto; top: 18px; left: 8.5em; margin-top: 0.9em; margin-right: 1em;}
 header #logo img{width: 98%;}
 
 header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder;}
@@ -93,6 +94,9 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 .revuepage .two .previewrevue {margin-left: 7em; width: 35em; text-align: justify;}
 
 /********* AIDE*/
+.aidepage .two {background-color: #0062B1;}
+
+.moderationpage .two {background-color: #404040;}
 
 /****************** NAVIGATION*/
 #navarrow { width: 100px; position: relative; display:block;margin-left:20px;/*bottom: 4%; left: 5%;*/  z-index:2000; }
@@ -125,7 +129,8 @@ form fieldset:nth-last-child(2) {background-color: white;}
 /************************** ADMIN PANEL*/
 .adminpanelbody {background-color: #404040; margin: 0; padding: 0 2em 2em 2em;color: white;}
 .adminpanel a {color: white; font-size: 0.9em;}
-.adminpanel h1 {color: white; text-shadow: 0.05em 0.05em 0 rgba(0,0,0,1); text-align: center; font-size: 4em; text-transform: uppercase; margin-top: 1em;}
+.adminpanel a:hover {text-decoration: none; color: #7D0071;}
+.adminpanel h1, .connexionpanel h1 {color: white; text-shadow: 0.05em 0.05em 0 rgba(0,0,0,1); text-align: center; font-size: 4em; text-transform: uppercase; margin-top: 1em; margin-bottom: 1em;}
 	
 .adminpanel .deco { float: right; text-align: right;}
 
@@ -139,6 +144,26 @@ form fieldset:nth-last-child(2) {background-color: white;}
 
 .adminpanel input {border-radius: 0; margin: 0 1em;}
 .adminpanel .tab-content {background-color: #141414; padding: 1em 0.2em 1em 0.2em;}
+.adminpanel table td.region1:after {content:"Savoie";}
+.adminpanel table td.region2:after {content:"Piémont";}
+.adminpanel table td.region3:after {content:"Dauphiné";}
+.adminpanel table td.region4:after {content:"Suisse";}
+
+.adminpanel .gestion_nav {font-size: 1.5em;}
+.adminpanel .gestion_nav i {padding-right: 0.5em;}
+.adminpanel .gestion_nav a {margin-right: 2em;}
+
+/******** CONNEXION PANEL*/ /*pour H1 voir Admin panel */
+.connexionpanel {background-color: #404040; padding: 1em;}
+.connexionpanel section {width: 20em; margin: auto;}
+.connexionpanel .backhome {text-align: center; margin-top: 2em; font-size: 1.5em;}
+.connexionpanel .connexionbox { background-color:#141414; padding: 1em; color: white;}
+.connexionpanel .connexionbox table {margin: auto;}
+.connexionpanel .connexionbox table tr td {margin: 0.2em;}
+.connexionpanel .connexionbox input[type="text"], .connexionpanel .connexionbox input[type="password"] {margin-left: 0.5em; background-color:  #282828; color: rgba(255,255,255,0.5); border:0; padding: 0.5em 0.5em;}
+.connexionpanel .connexionbox input[type="submit"] {display: block;background-color: #282828; border: 0; padding: 0.5em; margin: auto; width: 5em; color: white; margin-top: 1em;}
+
+
 
 
 

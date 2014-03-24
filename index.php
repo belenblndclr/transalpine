@@ -19,7 +19,7 @@
 		<header>
 			<nav>
 			  <ul>
-				<li class="compte"><a href="admin/">Mon compte</a></li>
+				<li class="compte"><a href="moderation.php">Modération</a></li>
 				<li class="accueil in"><a href="index.php">Accueil</a></li>
 				<li class="revues"><a href="revues.php">Revues</a></li>
 				<li class="aPropos"><a href="apropos.php">A propos</a></li>
