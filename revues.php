@@ -1,56 +1,19 @@
 ﻿<!doctype html>
 <head>
 	<meta charset="utf-8">
-	<title>Archive TransAlpine</title>
+	<title>Archives Médiévales TransAlpines</title>
+	<link rel="stylesheet" href="css/icon_font.css">
+	<link rel="stylesheet" href="css/filtrify/filtrify.css">
+	<link rel="stylesheet" href="css/filtrify/jPages.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/pagination.css" />
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.pagination.js"></script>
-    
-    <script type="text/javascript">
-    
-        // This demo shows how to paginate elements that were loaded via AJAX
-        // It's very similar to the static demo.
-    
-        /**
-         * Callback function that displays the content.
-         *
-         * Gets called every time the user clicks on a pagination link.
-         *
-         * @param {int}page_index New Page index
-         * @param {jQuery} jq the container with the pagination links as a jQuery object
-         */
-		function pageselectCallback(page_index, jq){
-            var new_content = $('#hiddenresult div.result:eq('+page_index+')').clone();
-            $('#Searchresult').empty().append(new_content);
-            return false;
-        }
-       
-        /** 
-         * Callback function for the AJAX content loader.
-         */
-        function initPagination() {
-            var num_entries = $('#hiddenresult div.result').length;
-            // Create pagination element
-            $("#Pagination").pagination(num_entries, {
-                num_edge_entries: 0,
-                num_display_entries: 0,
-                callback: pageselectCallback,
-                items_per_page:1
-            });
-         }
-                
-        // Load HTML snippet with AJAX and insert it into the Hiddenresult element
-        // When the HTML has loaded, call initPagination to paginate the elements        
-        $(document).ready(function(){      
-            $('#hiddenresult').load('revue/revue.php', null, initPagination);
-        });
-        
-        
-        
-    </script>
-
-</head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/filtrify/filtrify.js"></script>
+	<script src="js/filtrify/highlight.pack.js"></script>
+	<script src="js/filtrify/jPages.min.js"></script>
+	<script src="js/filtrify/jquery.isotope.min.js"></script>
+	<script src="js/filtrify/jquery.lazyload.min.js"></script>
+	<script src="js/filtrify/script.js"></script>
+</head>	
 
 <html style="height: 100%;">
   <body style="height: 100%;">  
@@ -59,7 +22,7 @@
 		<header>
 			<nav>
 			  <ul>
-				<li class="compte"><a href="admin/">Mon compte</a></li>
+				<li class="compte"><a href="moderation.php">Contributions</a></li>
 				<li class="accueil"><a href="index.php">Accueil</a></li>
 				<li class="revues in"><a href="revues.php">Revues</a></li>
 				<li class="aPropos"><a href="apropos.php">A propos</a></li>
@@ -72,21 +35,88 @@
 		</header>
 		
 		<div class="form">
-			<div id="Pagination"></div>
+		<p> Filtrer les Revues par:</p>
+		<div id="placeHolder"></div>
 		</div>
 	</div>
 
 	<section id="content" style="height: 100%;">
 			<div class="page revuepage">
-				<div id="Searchresult">
-					This content will be replaced when pagination inits.
-				</div>
-				<div id="hiddenresult" style="display:none;">
-        
-				</div>
+				<div class="section one">
+				
+				<div id="pagination"></div>
+				
+				<ul id="container">
+				
+				<?php
+							$req = $bdd->query('SELECT * FROM revue ORDER BY DATEPUBLICATION ASC');
+							while($data = $req->fetch()){
+									echo '<li data-keyword="'.stripslashes($data['KEYWORD1']).', '.stripslashes($data['KEYWORD2']).', '.stripslashes($data['KEYWORD3']).'" data-date="'.stripslashes($data['DATEPUBLICATION']).'" > <span class="couv"><img src=".'.stripslashes($data['COUV']).'"/></span>';
+									echo '<span class="col1">
+									<p><b>Date</b><br/>'.stripslashes($data['DATEPUBLICATION']).'</p><p>
+									<b>Référence</b><br/>'.stripslashes($data['IDREVUE']).'<br/>
+									</p>
+									<p>
+									 <a href="'.stripslashes($data['URLPDF']).'" class="icon-download-alt"></a></p> </span>';
+									echo '<span class="col2"> <h1>'.stripslashes($data['TITRE']).'</h1>';
+									echo '<p>'.stripslashes($data['PREVIEW']).'</p>';
+									echo '<p>Keywords : <i>'.stripslashes($data['KEYWORD1']).' - '.stripslashes($data['KEYWORD2']).' - '.stripslashes($data['KEYWORD3']).'</i></p></span>';
+							}
+							$req->closeCursor();
+						?>
+				</ul>
 			</div>
+			</div>
+			
 		</div>
 	</section>
+	
+	<script type="text/javascript">
+$(function() {
+
+    var container = $("#container"),
+        pagination = $("#pagination");
+
+    function setLazyLoad () {
+        container.find("img").lazyload({
+            event : "turnPage",
+            effect : "fadeIn"
+        });
+    };
+
+    function setPagination () {
+        pagination.jPages({
+            containerID : "container",
+            perPage : 1,
+            direction : "auto",
+            animation : false,
+			previous : "←",
+			next : "→",
+            callback : function( pages, items ){
+                items.showing.find("img").trigger("turnPage");
+                items.oncoming.find("img").trigger("turnPage");
+            }
+        });
+    };
+
+    function destroyPagination () {
+        pagination.jPages("destroy");
+    };
+
+    setLazyLoad();
+    setPagination();
+
+    $.filtrify("container", "placeHolder", {
+        block : "data-original",
+        callback : function() {
+            destroyPagination();
+            setPagination();
+        }
+    });
+
+
+});
+</script>
 	
 	
   </body>

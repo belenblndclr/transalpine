@@ -37,7 +37,7 @@
     <ul class="nav nav-tabs" style="margin-bottom:0;">
         <li class="active"><a href="#docs">Gestion des Documents</a></li>
         <li><a href="#revues">Gestion des Revues</a></li>
-        <li><a href="#last">Docs</a></li>
+        <li><a href="#contributions">Gestions des Contributions</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="docs">
@@ -45,7 +45,7 @@
                 Rechercher un Document <input id="filter" type="text"/>
                 <a href="#clear" class="clear-filter" title="clear filter">[Remettre à zéro]</a>
             </p>
-            <table class="table demo" data-filter="#filter" data-page-size="5">
+            <table class="table" data-filter="#filter" data-page-size="5">
                 <thead>
                 <tr>
                    <th>ID</th>
@@ -100,7 +100,7 @@
                 Rechercher une Revue <input id="filter2" type="text"/>
                 <a href="#clear" class="clear-filter" title="clear filter">[Remettre à zéro]</a>
             </p>
-            <table class="table demo" data-filter="#filter2" data-page-size="5">
+            <table class="table" data-filter="#filter2" data-page-size="5">
                 <thead>
                 <tr>
 					<th>ID</th>
@@ -149,8 +149,55 @@
 				</a>
 			</section>
         </div>
-        <div class="tab-pane" id="last">
-           3
+        <div class="tab-pane" id="contributions">
+           <p>
+                Rechercher une Contribution <input id="filter3" type="text"/>
+                <a href="#clear" class="clear-filter" title="clear filter">[Remettre à zéro]</a>
+            </p>
+            <table class="table" data-filter="#filter3" data-page-size="10">
+                <thead>
+                <tr>
+					<th>ID</th>
+					<th>Date de la Contribution</th>
+					<th>Email de la Contribution</th>
+					<th>Texte Contribué</th>
+					<th>Description de la Contribution</th>
+					<th></th>
+					<th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+						require('../id_connexion.php');
+							$req = $bdd->query('SELECT * FROM contribution ORDER BY DATECONTRI ASC');
+							while($data = $req->fetch()){
+								echo '<tr>';
+									echo '<td>'.stripslashes($data['IDDOC']).'</td>';
+									echo '<td>'.stripslashes($data['DATECONTRI']).'</td>';
+									echo '<td>'.stripslashes($data['EMAILCONTRI']).'</td>';
+									echo '<td>'.stripslashes($data['TXTCONTRI']).'</td>';
+									echo '<td>'.stripslashes($data['DESCCONTRI']).'</td>';
+									echo '<td><a href="edit.php?p='.$data['IDDOC'].'"><i class="icon-pencil-circled"></i></a></td>';
+									echo '<td><a class="delete" href="delete.php?p='.$data['IDDOC'].'"><i class="icon-cancel"></i></a></td>';
+								echo '</tr>';
+							}
+							$req->closeCursor();
+						?>
+                </tbody>
+                <tfoot class="hide-if-no-paging">
+                <tr>
+                    <td colspan="5">
+                        <div class="pagination pagination-centered"></div>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+			
+			<section class="gestion_nav">
+				<a href="add_article.php" target="_top">
+					<i class="icon-doc-new-circled"></i> Ajouter une Revue
+				</a>
+			</section>
     </div>
 </div>
 <script type="text/javascript">

@@ -22,7 +22,7 @@
 		<header>
 			<nav>
 			  <ul>
-				<li class="compte"><a href="admin/">Mon compte</a></li>
+				<li class="compte"><a href="moderation.php">Contributions</a></li>
 				<li class="accueil"><a href="index.php">Accueil</a></li>
 				<li class="revues"><a href="revues.php">Revues</a></li>
 				<li class="aPropos"><a href="apropos.php">A propos</a></li>
@@ -37,33 +37,38 @@
 		<div class="form">
 			<form>
 				<fieldset>
-					<legend>Régions</legend>
-						<input type="checkbox" name="region" id="savoie" value="1" /> <label for="savoie">Savoie</label>
-						<input type="checkbox" name="region" id="piemont" value="2"/> <label for="piemont">Piémont</label>
-						<input type="checkbox" name="region" id="dauphine" value="3"/> <label for="dauphine">Dauphiné</label>
-						<input type="checkbox" name="region" id="suisse" value="4"/> <label for="suisse">Suisse</label>
+				<legend>Régions</legend>
+					<input type="checkbox" name="savoie" id="savoie" /> <label for=	"savoie">Savoie</label>
+					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Piemont</label>
+					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">Dauphiné</label>
+					<input type="checkbox" name="suisse" id="suisse" /> <label for="suisse">Suisse</label>
 				</fieldset>
 				<fieldset>
-					<legend>Siècles</legend>
-						<input type="text" id="siecle" name="rangeName" value="10;100"/>
+				<legend>Siècles</legend>
+					<input type="text" id="siecle" name="rangeName" value="10;100"/>
 				</fieldset>
 				<fieldset>
-					<legend>Auteur</legend>
-						<input type="checkbox" name="ad" id="ad" /> <label for="ad">a-d</label>
-						<input type="checkbox" name="eh" id="eh" /> <label for="eh">e-h</label>
-						<input type="checkbox" name="il" id="il" /> <label for="il">i-l</label>
-						<input type="checkbox" name="mp" id="mp" /> <label for="mp">m-p</label>
-						<input type="checkbox" name="qt" id="qt" /> <label for="qt">q-t</label>
-						<input type="checkbox" name="uz" id="uz" /> <label for="uz">u-z</label>
+				<legend>Auteur</legend>					
+					<input type="checkbox" name="uz" id="uz" /> <label for="uz">u-z</label>
+					<input type="checkbox" name="qt" id="qt" /> <label for="qt">q-t</label>
+					<input type="checkbox" name="mp" id="mp" /> <label for="mp">m-p</label>
+					<input type="checkbox" name="il" id="il" /> <label for="il">i-l</label>
+					<input type="checkbox" name="eh" id="eh" /> <label for="eh">e-h</label>
+					<input type="checkbox" name="ad" id="ad" /> <label for="ad">a-d</label>
 				</fieldset>
 				<fieldset>
-					<legend>Typologie</legend>
-						<input type="checkbox" name="compta" id="compta" /> <label for="compta">Comptabilité</label>
-						<input type="checkbox" name="chartre" id="chartre" /> <label for="chartre">Chartres</label>
+				<legend>Typologie</legend>
+					<input type="checkbox" name="compta" id="compta" /> <label for="compta">Comptabilité</label>
+					<input type="checkbox" name="chartre" id="chartre" /> <label for="chartre">Chartres</label>
 				</fieldset>
 				<fieldset>
-					<legend>Référence</legend>
-						<input type="text" name="ref" id="ref" /> <label for="ref">Choisissez</label>
+					<legend>la Grande Histoire</legend>					
+					    
+				</fieldset>
+				<fieldset>
+					
+					<input type="submit" name="refvalue" value="Choisir une référence" />
+					<input type="text" name="ref" id="ref" /> 
 				</fieldset>
 			</form>
 		</div>

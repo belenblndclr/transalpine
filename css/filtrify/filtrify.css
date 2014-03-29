@@ -1,0 +1,211 @@
+/* icons font-face */
+/* reset */
+ul.ft-menu,
+ul.ft-menu * { 
+	margin: 0; 
+	border: 0; 
+	padding: 0;
+	position: relative;
+	text-align: left;
+}
+
+
+ul.ft-menu { 
+	list-style: none;
+}
+
+ul.ft-menu > li.ft-field { 
+	display: inline-block; 
+	*display: inline; 
+	*zoom: 1;
+	min-height: 2em;
+	text-align: right;
+	position: relative !important;
+}
+
+ul.ft-menu > li.ft-field > span.ft-label { 
+    cursor: pointer;
+	padding: 0.4em 2em;
+	line-height: 2em;
+	text-transform: capitalize  !important;
+	font-weight: bold;
+	color:#BD0022;
+	background:#D1D1D1;
+	
+}
+/*ul.ft-menu > li.ft-field > span.ft-label:before { 
+    display: inline-block; 
+    *display: inline; 
+	*zoom: 1;
+    width: 20px;
+}
+ul.ft-menu > li.ft-field > span.ft-label:after { 
+    font-size: 80%; 
+    content: " \25bc"; 
+}
+.ft-menu > li.ft-field > span.ft-label.ft-active:before { 
+    content: "T"; 
+    color: #2D3743; 
+}
+ul.ft-menu > li.ft-field > span.ft-label.ft-opened:after { 
+    content: " \25b2"; 
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel { 
+	position: absolute; 
+	min-width: 200px; 
+	background-clip: padding-box;
+	border: 5px solid #333333;
+	border: 5px solid rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	top: 100%;
+	margin-top: 15px;
+	left: 50%;
+	margin-left: -105px;
+	z-index: 9999;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+ul.ft-menu > li.ft-field > div.ft-panel:before,
+ul.ft-menu > li.ft-field > div.ft-panel:after {
+	position: absolute;
+	content: " ";
+	height: 0;
+	width: 0;
+	left: 50%;
+}
+ul.ft-menu > li.ft-field > div.ft-panel:before {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #333333;
+	border-bottom: 10px solid rgba(0, 0, 0, 0.3);
+	top: -15px;
+	margin-left: -10px;
+}
+ul.ft-menu > li.ft-field > div.ft-panel:after {
+	content: " ";
+	height: 0;
+	width: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #F5F3EE;
+	top: -8px;
+	margin-left: -8px;
+}*/
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected {
+	padding: 0.2em;
+	background: #EDEDED;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li {
+	font-size: 0.7em;
+	display: inline-block;
+	*display: inline; 
+	*zoom: 1;
+	margin: 0.2em;
+	cursor: pointer;
+	padding: 0.5em;
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	background: #BD0022;
+	letter-spacing: 0.1em;
+}
+/*ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li:after {
+	content: " \00D7";
+	color: white;
+}*/
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li:active {
+	background: #DDDDDD;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search { 
+	background: none !important;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search:before {
+
+}
+ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search > input { 
+	outline: none;
+	margin: 0;
+	display: block;
+	width: 96%;
+	padding: 0 2%;
+	height: 3em;
+	color: gray;
+	background: white;
+	font-size: 0.6em;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags { 
+	position: relative !important; 
+	max-height: 200px !important; 
+	padding: 3%;
+	overflow-x: hidden; 
+	overflow-y: auto; 
+	width: 94%;
+}
+/*ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li { 
+    font-size: 12px;
+	display: block;
+	border-bottom: 1px solid #33373D;
+	box-shadow: inset 0 1px 0 0 #878e98;
+	display: block;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+	padding: 8px 35px 8px 15px;
+	cursor: pointer;
+	background: #616975;
+	background: -webkit-linear-gradient(#727A86, #505864);
+	background: -moz-linear-gradient(#727A86, #505864);
+	background: -o-linear-gradient(#727A86, #505864);
+	background: -ms-linear-gradient(#727A86, #505864);
+	background: linear-gradient(#727A86, #505864);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr="#727a86", EndColorStr="#505864");
+}*/
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li:after { 
+	/*content: attr(data-count);*/
+    font-size: 0.8em;
+    font-weight: normal;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	position: absolute;
+	right: 2em;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-highlight { 
+	background: #DDDDDD;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-highlight:active {
+	background: #EDEDED;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-highlight:after {
+	
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > div.ft-mismatch {
+    font-size: 0.7em;
+	padding: 0.5em 0.2em;
+	color: white;
+	background: #555555;
+}
+
+/* REQUIRED! */
+.ft-hidden { display: none !important; }
+
+
+/* Custom webkit scrollbars */
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags::-webkit-scrollbar {
+    width: 10px;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+    background: #DDD;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    background: #EEE;
+}
+

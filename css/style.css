@@ -19,7 +19,7 @@
   src: url(font/SubtleSansRegular.ttf) format("truetype");
 }
 
-/*************************** GENERAL */
+/*************************** GENERAL*/
 html,body { margin: 0; padding: 0; font-family: Sertig; }
 ul, li { list-style: none;}
 a  {color: #6D6D6D; text-decoration: none;}
@@ -29,8 +29,9 @@ a  {color: #6D6D6D; text-decoration: none;}
 .menu { width: 25em; left:0; position: absolute;  border-right: 1em solid #7D0076; background-color: #fcfcfc; z-index: 1000;}
 .menuapropos { border-color:#FF9B00;}
 .menurevue { border-color:#BD0022;}
-.menuaide { border-color:#0062B1;}
+.menuaide { border-color:#0062B1; cursor: help;}
 .menumoderation {border-color: #404040;}
+.menu .form p {font-family: Courier; margin-left: 1em; opacity: 0.5; font-size: 0.8em; text-align: center;}
 	
 /****************** HEADER*/
 header {margin-left: 0;width: auto;}
@@ -42,7 +43,8 @@ header nav .compte { background-color: #404040;margin-bottom: 60px;}
 header nav .accueil { background-color: #500065;}
 header nav .revues { background-color: #bd0022;}
 header nav .aPropos { background-color: #ff9b00;}
-header nav .aide { background-color: #0062b1;}
+header nav .aide { background-color: #0062b1; cursor: help;}
+header nav .aide a {cursor: help;}
 
 header #logo {position: absolute; float: left; width: auto; top: 18px; left: 8.5em; margin-top: 0.9em; margin-right: 1em;}
 header #logo img{width: 98%;}
@@ -50,9 +52,31 @@ header #logo img{width: 98%;}
 header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder;}
 
 
+/****************** CONTRIBUTION*/
+.menumoderation .form p a {color: black; font-weight: bold;}
+.menumoderation .form p input { display: block; margin: 1em auto; width: 20em; box-shadow: 0 0 0.3em rgba(0,0,0,0.5); border: 0; height: 2em; padding: 0.3em 0.6em;}
+
+.menumoderation .form p input:active, .menumoderation .form p input:hover { box-shadow: 0 0 0.3em rgba(0,0,0,0.8);}
+
+.menumoderation .form .statut {margin-top: 3em; font-size: 0.7em;}
+
+.menumoderation .form .statut .att {color: grey;}
+.menumoderation .form .statut .maj {color: green;}
+.menumoderation .form .statut .ref {color: red;}
+
+.moderationpage .att { color: grey; opacity: 0.7;}
+.moderationpage .maj { color: green; opacity: 0.7;}
+.moderationpage .ref { color: red; opacity: 0.7;}
+
+.moderationpage table tr td {padding: 0.2em 0.5em;}
+
+.moderationpage table tr td:nth-last-of-type(1) {text-align: center;}
+.moderationpage table thead tr {background-color: #404040; text-align: center; font-size: 0.7em; font-family: Courier; color: white;}
+.moderationpage table tbody tr:nth-of-type(even) {background-color: #F9F9F9;}
 
 /****************** CONTACT*/
 .contact {width: auto; background-color: #404040; position: fixed; bottom: 0; right: 0; color: white; padding: 0.2em; margin: 0.1em;}
+
 
 /****************** MAP*/
 .content { z-index: 1; position: fixed; left:0;}
@@ -61,7 +85,7 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 /****************** PAGES*/
 .page { padding-left:25em; height:95%; text-align: left; padding-top: 1em; background-color:white; }
 .page h1 { font-weight: 100; font-size: 3em; }
-.page .section { padding-left: 2em;}
+.page .section { padding-left: 2em; padding-right: 1em;}
 .page .two{ background-color:#7D0076; padding-top: 0.5em; height: 30%; position: fixed; bottom: 0; width: 100%;}
 .page  p { width: auto; margin-top: 0em; margin-bottom: 2em;}
 .page h2 { text-transform:uppercase; font-weight: 100; padding:0; margin-top:2em; margin-bottom: 0em; font-size: 1.5em; letter-spacing: -0.03em;}
@@ -70,6 +94,14 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 /********* ACCUEIL*/
 .accueilpage .one p { font-size: 0.9em; width: 30em; line-height: 1.1em;}
 .accueilpage .two {color: white;}
+.accueilpage .two p {opacity: 0.6; margin: 2em;}
+
+.accueilpage .one .carte {width: 15em; display: block; background-color: #7D0076; padding: 1em 2em; text-align: center; margin: auto; box-shadow: 0 0 1em #500065 inset;}
+.accueilpage .one .carte a { color: #FF9B00; font-size: 2em;text-shadow: 0.04em 0.04em 0 rgba(255,255,255,0.2);}
+
+.accueilpage .one .carte:hover {box-shadow: none;}
+.accueilpage .one .carte:hover >  a{ color: #FFBE00;}
+
 
 /********* APROPOS*/
 .apropospage {padding-top: 0;}
@@ -87,13 +119,32 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 
 /********* REVUE*/
 .revuepage {padding-top: 0;}
-.revuepage .one { background-color:#BD0022; height: 50%; padding-top: 1em; padding-left: 20em;}
+.revuepage .one { background-color:white; height: 50%; padding: 0; !important;}
 .revuepage .two {background-color: white; padding-left: 5em; padding-top: 2em;}
 .revuepage .two .datarevu {width: 7em; float: left; color: #BD0022;}
 .revuepage .two h1 { margin:0; padding:0; font-size: 2em; margin-bottom: 0.5em;}
 .revuepage .two .previewrevue {margin-left: 7em; width: 35em; text-align: justify;}
 
+.menurevue .form #placeHolder {width: 23em; margin-left: 1em; text-transform: capitalize; font-family: Sertig;}
+.menurevue .form #placeHolder ul .ft-field {background-color: #E4E4E4; width: 100%; margin-bottom: 1em; }
+.menurevue .form #placeHolder ul .ft-field .ft-tags {height: 5em;}
+
+.revuepage ul li span {display: inline-block;}
+.revuepage ul li span.col2 {margin:0; padding:1.5em 1em;width: 60%; text-align: justify;}
+.revuepage ul li span.col2 h1 {margin:0; padding:0;}
+.revuepage ul li span.col2 p:last-of-type {font-size: 0.9em;}
+.revuepage ul li span.col2 p i {text-transform:capitalize ;}
+.revuepage ul li span.col1 {color: #BD0022;vertical-align: top;margin-left:15%; padding-top:2em; width: 9%; }
+.revuepage ul li span.col1 p:last-of-type {text-align: center;}
+.revuepage ul li span.col1 a {font-size: 3em; color:#BD0022;}
+.revuepage ul li span.col1 a:hover {color: white; background-color:#BD0022;}
+.revuepage ul li .couv{ width: 100%; background-color: #BD0022; text-align: center;}
+
+.revuepage #container {margin:0; padding: 0 0 0 1em; !important;}
+
+
 /********* AIDE*/
+.aidepage {cursor: help;}
 .aidepage .two {background-color: #0062B1;}
 
 .moderationpage .two {background-color: #404040;}
@@ -137,10 +188,12 @@ form fieldset:nth-last-child(2) {background-color: white;}
 .adminpanel table {width: 100%; background-color: #303030; color: #F7F7F7;}
 .adminpanel table tr td {padding-left: 1em; border: 0;}
 .adminpanel table tr:nth-child(even) {background-color: #444444;}
-.adminpanel table thead {background-color:#282828;}
+.adminpanel table thead {background-color:#282828; font-family: Courier; }
+.adminpanel table thead tr th {text-align: center;}
 .adminpanel table a{color: white;}
 .adminpanel table a:hover {color: #7D0076;}
-.adminpanel table tr th:first-of-type, .adminpanel table tr th:last-of-type, .adminpanel table tr th:nth-last-child(2) {width: 2em;}
+.adminpanel table tr th:first-of-type, .adminpanel table tr th:last-of-type, .adminpanel table tr th:nth-last-child(2) {width: 3em;}
+.adminpanel table tbody tr td:first-of-type, .adminpanel table tbody tr td:last-of-type, .adminpanel table tbody tr td:nth-last-child(2) {text-align: center;}
 
 .adminpanel input {border-radius: 0; margin: 0 1em;}
 .adminpanel .tab-content {background-color: #141414; padding: 1em 0.2em 1em 0.2em;}

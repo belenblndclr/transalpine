@@ -12,7 +12,7 @@
 		<header>
 			<nav>
 			  <ul>
-				<li class="compte"><a href="moderation.php">Modération</a></li>
+				<li class="compte"><a href="moderation.php">Contributions</a></li>
 				<li class="accueil"><a href="index.php">Accueil</a></li>
 				<li class="revues"><a href="revues.php">Revues</a></li>
 				<li class="aPropos"><a href="apropos.php">A propos</a></li>
@@ -25,7 +25,7 @@
 		</header>
 		
 		<div class="form">
-			#Revue
+			<p>#Revue</p>
 		</div>
 	</div>
 

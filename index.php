@@ -19,7 +19,7 @@
 		<header>
 			<nav>
 			  <ul>
-				<li class="compte"><a href="moderation.php">Modération</a></li>
+				<li class="compte"><a href="moderation.php">Contributions</a></li>
 				<li class="accueil in"><a href="index.php">Accueil</a></li>
 				<li class="revues"><a href="revues.php">Revues</a></li>
 				<li class="aPropos"><a href="apropos.php">A propos</a></li>
@@ -32,42 +32,7 @@
 		</header>
 		
 		<div class="form">
-			<form>
-				<fieldset>
-				<legend>Régions</legend>
-					<input type="checkbox" name="savoie" id="savoie" /> <label for=	"savoie">Savoie</label>
-					<input type="checkbox" name="piemont" id="piemont" /> <label for="piemont">Piemont</label>
-					<input type="checkbox" name="dauphine" id="dauphine" /> <label for="dauphine">Dauphiné</label>
-					<input type="checkbox" name="suisse" id="suisse" /> <label for="suisse">Suisse</label>
-				</fieldset>
-				<fieldset>
-				<legend>Siècles</legend>
-					<input type="text" id="siecle" name="rangeName" value="10;100"/>
-				</fieldset>
-				<fieldset>
-				<legend>Auteur</legend>					
-					<input type="checkbox" name="uz" id="uz" /> <label for="uz">u-z</label>
-					<input type="checkbox" name="qt" id="qt" /> <label for="qt">q-t</label>
-					<input type="checkbox" name="mp" id="mp" /> <label for="mp">m-p</label>
-					<input type="checkbox" name="il" id="il" /> <label for="il">i-l</label>
-					<input type="checkbox" name="eh" id="eh" /> <label for="eh">e-h</label>
-					<input type="checkbox" name="ad" id="ad" /> <label for="ad">a-d</label>
-				</fieldset>
-				<fieldset>
-				<legend>Typologie</legend>
-					<input type="checkbox" name="compta" id="compta" /> <label for="compta">Comptabilité</label>
-					<input type="checkbox" name="chartre" id="chartre" /> <label for="chartre">Chartres</label>
-				</fieldset>
-				<fieldset>
-					<legend>la Grande Histoire</legend>					
-					    
-				</fieldset>
-				<fieldset>
-					
-					<input type="submit" name="refvalue" value="Choisir une référence" />
-					<input type="text" name="ref" id="ref" /> 
-				</fieldset>
-			</form>
+			
 		</div>
 	</div>
 
@@ -77,6 +42,9 @@
 					<h1>L'histoire opère lentement</h1>
 					<p> Mesdames, messieurs, l'effort prioritaire en faveur du statut précaire des exclus doit nous amener au choix réellement impératif d'une restructuration dans laquelle chacun pourra enfin retrouver sa dignité.</p>
 					<p>Je me tiens devant vous et vous dis que la politique globale mondialiste conforte mon désir incontestable d'aller dans le sens d'un plan correspondant véritablement aux exigences légitimes de chacun.</p>
+					
+					
+					<span class="carte"><a href="carte.php">Explorer la carte</a></span>
 				</div>
 				<div class="section two">
 					<p>Réalisé avec le soutient de</p>

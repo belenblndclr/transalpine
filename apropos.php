@@ -13,7 +13,7 @@
 		<header>
 			<nav>
 			  <ul>
-				<li class="compte"><a href="admin/">Mon compte</a></li>
+				<li class="compte"><a href="moderation.php">Contributions</a></li>
 				<li class="accueil"><a href="index.php">Accueil</a></li>
 				<li class="revues"><a href="revues.php">Revues</a></li>
 				<li class="aPropos in"><a href="apropos.php">A propos</a></li>
@@ -26,7 +26,7 @@
 		</header>
 		
 		<div class="form">
-			#Revue
+			<p>#Revue</p>
 		</div>
 	</div>
 
@@ -41,8 +41,8 @@
 					</span>
 					
 					<span class="b">
-						<i class="xl icon-paper-plane"></i>
-						<h2>Les Archives TransAlpine</h2>
+						<i class="xl icon-book"></i>
+						<h2>Les Archives</h2>
 						<p>Ce site est a destination de tout public, désireux de parfaire ses connaissances en histoire locale et médiévale. Professeur, amateur ou simple curieux, il n'est pas nécessaire d'être passionné pour explorer l'histoire des Alpes via cette expérience.</p>
 					</span>
 					<span class="c">

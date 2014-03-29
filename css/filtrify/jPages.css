@@ -1,0 +1,36 @@
+div#pagination {
+	background-color: #BD0022;
+	text-align: center;
+	font-size: 0.8em;
+	padding: 0.5em 0;
+	cursor: default !important;
+	text-transform: uppercase;
+	font-weight: bold; 
+}
+
+div#pagination > a {
+	margin: 0 10px;
+	color: white;
+	text-decoration: none;
+	opacity: 1;
+}
+div#pagination a.jp-previous {
+    margin-left: 0;
+}
+div#pagination > a:hover {
+	opacity: 0.9;}
+
+div#pagination > a.jp-current, 
+div#pagination > a.jp-current:hover,
+div#pagination > a.jp-disabled, 
+div#pagination > a.jp-disabled:hover { 
+    cursor: default !important;
+	opacity: 0.8;
+	
+}
+
+div#pagination > span { 
+}
+
+.icon-left:before { content: '\e805'; } /* '?' */
+.icon-right:before { content: '\e804'; } /* '?' */
