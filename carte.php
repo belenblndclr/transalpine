@@ -3,6 +3,7 @@
 	<meta charset="utf-8">
 	<title>Archive TransAlpine</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/icon_font.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
