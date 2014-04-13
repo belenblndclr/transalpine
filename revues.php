@@ -60,7 +60,7 @@
 									 <a href="'.stripslashes($data['URLPDF']).'" class="icon-download-alt"></a></p> </span>';
 									echo '<span class="col2"> <h1>'.stripslashes($data['TITRE']).'</h1>';
 									echo '<p>'.stripslashes($data['PREVIEW']).'</p>';
-									echo '<p>Keywords : <i>'.stripslashes($data['KEYWORD1']).' - '.stripslashes($data['KEYWORD2']).' - '.stripslashes($data['KEYWORD3']).'</i></p></span>';
+									echo '<p>Keywords : <i>'.stripslashes($data['KEYWORD1']).' - '.stripslashes($data['KEYWORD2']).' - '.stripslashes($data['KEYWORD3']).'</i></p></span></li>';
 							}
 							$req->closeCursor();
 						?>
