@@ -1,21 +1,13 @@
 ﻿<!doctype html>
 <head>
 	<meta charset="utf-8">
-	<title>Archive TransAlpine</title>
+	<title>Archives TransAlpines</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/ion.rangeSlider.css">
-	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
-	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="js/util.js"></script>
-	<script src="js/ion.rangeSlider.js"></script>
-	<script src="js/ion.rangeSlider.min.js"></script>
-	<script src="js/normalize.min.js"></script>
 </head>
 
 <html style="height: 100%;">
   <body style="height: 100%;">  
-	<?php require('id_connexion.php');	?>
-	<div class="menu" style="height: 90%; background-color: white;">
+	<div class="menu" style="height: 100%; background-color: white; position: fixed; top: 0;">
 		<header>
 			<nav>
 			  <ul>
@@ -36,7 +28,7 @@
 		</div>
 	</div>
 
-	<section id="content" style="height: 100%;">
+	<section id="content" style="height: 100%;position: fixed;top:0;">
 			<div class="page accueilpage">
 				<div class="section one">
 					<h1>L'histoire opère lentement</h1>

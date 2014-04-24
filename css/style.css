@@ -59,7 +59,7 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 
 
 /****************** PAGES*/
-.page { padding-left:25em; height:95%; text-align: left; padding-top: 1em; background-color:white; }
+.page { padding-left:25em; height:95%; text-align: left; padding-top: 0; background-color:white; }
 .page h1 { font-weight: 100; font-size: 3em; }
 .page .section { padding-left: 2em; padding-right: 1em;}
 .page .two{ background-color:#7D0076; padding-top: 0.5em; height: 30%; position: fixed; bottom: 0; width: 100%;}
@@ -118,6 +118,15 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 
 .revuepage #container {margin:0; padding: 0 0 0 1em; !important;}
 
+/********* DOC*/
+.docpage .one { height: 50%; !important;}
+.docpage .section{ padding-left: 1em; padding-right: 0;}
+.docpage .section .part {width: 48%; float: left; height:100% ; overflow: auto; padding: 1%; margin: 0; padding-top: 2em; }
+.docpage .section .my-img {background-color: #890080;}
+.docpage .section .my-editor {background-color: #7D0076; font-size: 1em; font-family: arial; padding-top: 2em;}
+.docpage .two {height: 5em;}
+
+.docpage .two a {padding:0.5em; background-color: #700068; color: white;}
 
 /********* AIDE*/
 .aidepage {cursor: help;}
@@ -136,6 +145,7 @@ header nav .in {box-shadow: 0 0 0.5em rgba(0,0,0,0.4) inset; font-weight: bolder
 fieldset {background-color: #E4E4E4; margin: 1.3em 1em; padding: 0; border: none; }
 fieldset legend {width: 7em; float: right; padding: 0.4em 0.5em; text-align:center; margin-left: 1em; color: #7D0076; background-color: #D1D1D1; font-weight: bold;}
 fieldset input {display: none;}
+fieldset input[type=checkbox]:checked + label{ color: #7D0076;}  
 fieldset label {display:block; float:right; cursor: pointer; color: #9E9E9E; margin: 0.45em 0; padding: 0 0.3em; border-right: 1px solid #9E9E9E; font-size: 0.9em;}
 fieldset label:first-of-type {border:0;}
 fieldset label:hover {color: #7D0076;}

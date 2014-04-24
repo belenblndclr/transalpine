@@ -103,7 +103,7 @@
             <table class="table" data-filter="#filter2" data-page-size="5">
                 <thead>
                 <tr>
-					<th>ID</th>
+					
 					<th>Date de Publication</th>
 					<th>Référence</th>
 					<th>Couverture</th>
@@ -120,7 +120,7 @@
 							$req = $bdd->query('SELECT * FROM revue ORDER BY DATEPUBLICATION ASC');
 							while($data = $req->fetch()){
 								echo '<tr>';
-									echo '<td>'.stripslashes($data['IDREVUE']).'</td>';
+									
 									echo '<td>'.stripslashes($data['DATEPUBLICATION']).'</td>';
 									echo '<td>'.stripslashes($data['REFERENCE']).'</td>';								
 									echo '<td><img src="../'.stripslashes($data['COUV']).'" height="100px"/></td>';

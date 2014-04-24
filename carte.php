@@ -46,9 +46,19 @@
 				</fieldset>
 				<fieldset>
 				<legend>Siècles</legend>
-					<input type="text" id="siecle" name="rangeName" value="10;100"/>
+					<!--<input type="text" id="siecle" name="rangeName" value="10;100"/>-->
+					
+					<input type="checkbox" name="8" id="8" /> <label for=	"8">IIX</label>
+					<input type="checkbox" name="9" id="9" /> <label for=	"9">IX</label>
+					<input type="checkbox" name="10" id="10" /> <label for=	"10">X</label>
+					<input type="checkbox" name="11" id="11" /> <label for=	"11">XI</label>
+					<input type="checkbox" name="12" id="12" /> <label for=	"12">XII</label>
+					<input type="checkbox" name="13" id="13" /> <label for=	"13">XIII</label>
+					<input type="checkbox" name="14" id="14" /> <label for=	"14">XIV</label>
+					<input type="checkbox" name="14" id="14" /> <label for=	"15">XV</label>
+
 				</fieldset>
-				<fieldset>
+				<!--<fieldset>
 				<legend>Auteur</legend>					
 					<input type="checkbox" name="uz" id="uz" /> <label for="uz">u-z</label>
 					<input type="checkbox" name="qt" id="qt" /> <label for="qt">q-t</label>
@@ -56,20 +66,28 @@
 					<input type="checkbox" name="il" id="il" /> <label for="il">i-l</label>
 					<input type="checkbox" name="eh" id="eh" /> <label for="eh">e-h</label>
 					<input type="checkbox" name="ad" id="ad" /> <label for="ad">a-d</label>
-				</fieldset>
+				</fieldset>-->
 				<fieldset>
 				<legend>Typologie</legend>
 					<input type="checkbox" name="compta" id="compta" /> <label for="compta">Comptabilité</label>
 					<input type="checkbox" name="chartre" id="chartre" /> <label for="chartre">Chartres</label>
 				</fieldset>
-				<fieldset>
+				<!--<fieldset>
 					<legend>la Grande Histoire</legend>					
 					    
-				</fieldset>
+				</fieldset>-->
 				<fieldset>
 					
 					<input type="submit" name="refvalue" value="Choisir une référence" />
-					<input type="text" name="ref" id="ref" /> 
+					<select name="ref" size="1">
+				<?php
+							$req = $bdd->query('SELECT * FROM document');
+							while($data = $req->fetch()){
+									echo '<option>'.stripslashes($data['IDDOC']).'</option>';
+							}
+							$req->closeCursor();
+				?>
+				</select>
 				</fieldset>
 			</form>
 		</div>

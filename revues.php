@@ -54,7 +54,7 @@
 									echo '<li data-keyword="'.stripslashes($data['KEYWORD1']).', '.stripslashes($data['KEYWORD2']).', '.stripslashes($data['KEYWORD3']).'" data-date="'.stripslashes($data['DATEPUBLICATION']).'" > <span class="couv"><img src=".'.stripslashes($data['COUV']).'"/></span>';
 									echo '<span class="col1">
 									<p><b>Date</b><br/>'.stripslashes($data['DATEPUBLICATION']).'</p><p>
-									<b>Référence</b><br/>'.stripslashes($data['IDREVUE']).'<br/>
+									<b>Référence</b><br/>'.stripslashes($data['REFERENCE']).'<br/>
 									</p>
 									<p>
 									 <a href="'.stripslashes($data['URLPDF']).'" class="icon-download-alt"></a></p> </span>';
@@ -63,7 +63,7 @@
 									echo '<p>Keywords : <i>'.stripslashes($data['KEYWORD1']).' - '.stripslashes($data['KEYWORD2']).' - '.stripslashes($data['KEYWORD3']).'</i></p></span></li>';
 							}
 							$req->closeCursor();
-						?>
+				?>
 				</ul>
 			</div>
 			</div>
